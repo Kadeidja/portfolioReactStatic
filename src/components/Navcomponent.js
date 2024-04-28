@@ -11,14 +11,6 @@ function Navbarcomp(){
        </div>
        
        <div id="leMenuNav">
-         <div id ="leBouton">
-           <button type="button" id="showLeMenuLiLDevice">
-             <span>MENU</span>
-           </button>
-           <button type="button" id="hideLeMenuLiLDevice">
-             <span>CLOSE</span>
-           </button>
-         </div>
          <ul id="listMenuNav">
            <li className="listMenuNavItem"><Link to="/aboutme">QUI SUIS JE</Link></li>
            <li className="listMenuNavItem"><Link to="/carrer">MON PARCOURS</Link></li>
@@ -26,13 +18,6 @@ function Navbarcomp(){
            <li className="listMenuNavItem"><Link to="/contactme">ME CONTACTER</Link></li>
          </ul>
        </div>
-       
-       <div id="barreDeRecherche">
-         <button id="bouttonRechercher">
-           <span>SEARCH BUTTON</span>
-         </button>
-       </div>
-       
      </nav>
       
            

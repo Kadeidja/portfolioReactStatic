@@ -185,6 +185,42 @@ textarea#contactmessageId{
 
 }
 
+/*CONSTRUCTION COMPONENTS*/
+#constrTtl{
+    margin-top: 5rem;
+    margin-bottom: 0.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+#switchBtn{
+    padding: 0.5em;
+    background-color: black;
+    border: solid 0.2em black;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+}
+#spanCheckId{
+    font-family:Urbanist , sans-serif;
+}
+.singleSect{
+display: inline-flex;
+ justify-content: center;
+ width: 100%;
+ height: 100%;
+}
+.divsingleSect{
+    font-size: 5rem;
+}
+#constrMsg{
+    margin: 0.1em;
+}
+#divBtnSwitch{
+    display: inline-flex;
+    margin: 0.1em;
+    padding: 0.1em;
+}
 /*RESPONSIVE PART-------------------------------------------------------------------*/
 
 @media only screen and (max-width: 768px) {
@@ -195,4 +231,35 @@ textarea#contactmessageId{
     .subSectionShow{}
     .divSectionShow{}
 
+/*CONSTRUCTION COMPONENTS*/
+#constrTtl{
+    margin-top: 2rem;
+    margin-bottom: 0.1rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    font-size: 50%;
+}
+#switchBtn{
+    padding: 0.4em;
+    background-color: black;
+    border: solid 0.1em black;
+    border-radius: 0.1rem;
+    font-weight: 200;
+    font-size: 0.9rem;
+    color: white;
+}
+#spanCheckId{
+    font-family:Urbanist , sans-serif;
+}
+.singleSect{
+display: inline-flex;
+ justify-content: center;
+}
+.divsingleSect{
+    font-size: 5rem;
+}
+#constrMsg{
+    margin: 0.1em;
+    font-size: 30%;
+}
 }

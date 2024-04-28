@@ -221,6 +221,15 @@ display: inline-flex;
     margin: 0.1em;
     padding: 0.1em;
 }
+#switchBtn:active{
+    padding: 0.5em;
+    background-color: black;
+    border: solid 0.1em black;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: white;
+}
 /*RESPONSIVE PART-------------------------------------------------------------------*/
 
 @media only screen and (max-width: 768px) {
@@ -246,6 +255,15 @@ display: inline-flex;
     border-radius: 0.1rem;
     font-weight: 200;
     font-size: 0.9rem;
+    color: white;
+}
+#switchBtn:active{
+    padding: 0.4em;
+    background-color: black;
+    border: solid 0.1em black;
+    border-radius: 0.1rem;
+    font-weight: 200;
+    font-size: 0.7rem;
     color: white;
 }
 #spanCheckId{

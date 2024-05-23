@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body{
+    background-image:   url('../assets/img/bkgimg.jpg');
     box-sizing:border-box;
     position: relative;
     /*padding:10px;Valeur de marges intérieurs*/
 }
 section{
-    width: 100vw;
-    height: 100vh;
+    
     display: flex;
     padding: 1rem;
     box-sizing:border-box;
@@ -21,7 +24,8 @@ h1,h2,h3,h4,h5,h6{
     font-family:Anton , sans-serif;   
 }
 p{
-    font-family:Urbanist , sans-serif;
+    font-family:Rajdhani,Roboto,Urbanist , sans-serif;
+    font-weight: 500;
 }
 
 .bigSection, .homeSection{
@@ -32,12 +36,10 @@ p{
 .subSectionTtl, .homesubSectionTtl{
     box-sizing:border-box;
     display: inline-flex;
-    margin-top: 4rem;
     max-width: 20vw;
     max-height: 100vh;
-    margin-right : 1rem;
-    margin-left : 1rem;
-    margin-bottom: 1rem;
+    padding : 1rem;
+
     overflow: none;
     flex: 1 0 0%;
 }
@@ -45,25 +47,27 @@ p{
     writing-mode: vertical-rl;
     font-weight: 900;
     position: fixed;
-    justify-content: center;
-    height: 100%;
+    height: -webkit-fill-available;
     width: auto;
-    font-size: 3rem;
+    font-size: 2.5rem;
     overflow: none;
+}
+.divSectionTtl>h1{
+    display: flex;
+    justify-content: center;
 }
 
 .subSectionShow, .homesubSectionShow{
     box-sizing:border-box;
     display: inline-flex;
-    margin-top: 4rem;
+    padding-top: 4rem;
     flex-wrap: wrap;
     flex-direction: row;
     max-width: 80vw;
     max-height: 100vh;
-    margin-right : 1rem;
-    margin-left : 1rem;
-    margin-bottom: 1rem;
-    width: 100%;
+    padding-right : 1rem;
+    padding-left : 1rem;
+    padding-bottom: 1rem;
     flex: 1 0 0%;
 }
 .divSectionShow, .homedivSectionShow{
@@ -76,7 +80,7 @@ p{
 
 /*COMPONENT NAVBAR*/
 #navSection{
-    display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: none;
@@ -85,11 +89,19 @@ p{
     position: fixed;
 }
 #btnBranding{
+    display: inline;
     width: 20vw;
 }
-#leMenuNav{
-    width: 60vw;
+#btnNavMenu{
+    display: inline;
 }
+#leMenuNav{
+    justify-content: space-between;
+    display: inline;
+    justify-items: center;
+    align-items: center;
+}
+
 #barreDeRecherche{
     width: 20vw;
 }
@@ -107,7 +119,7 @@ p{
     text-decoration: none;
 }
 
-/*HELLO PAGE*/
+/*HELLO PAGE-----------------------------------------------------------------------------------------------*/
 #homepageId{
     width: 100vw;
     height: 100vh;
@@ -136,7 +148,31 @@ p{
     margin: 0.5rem;
 }
 
-/*MY WORK COMPONENTS*/
+/*ABOUT ME COMPONENTS--------------------------------------------------------------------------------------*/
+.aboutSpace{
+    width: 80vw;
+    display: flex;
+}
+.logoSpace{
+    width: 80vw;
+    box-sizing: inherit;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    overflow-x: scroll;
+}
+#imgAboutId{
+    max-width: 20%;
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    padding: 1rem;
+}
+#pAboutId{
+    display: inline-flex;
+    padding: 1rem;
+}
+
+/*MY WORK COMPONENTS--------------------------------------------------------------------------------------*/
 .subimgClass{
     display: block;
     max-width: -moz-available;          /* WebKit-based browsers will ignore this. */
@@ -144,6 +180,63 @@ p{
     max-width: fill-available;
     margin: 0.5rem;
 }
+.workelemDiv{
+    display: inline-block;
+    width: 100%;
+    max-width: 20%;
+    margin: 1rem;
+    padding: 2rem;
+}
+.workelemTtl{
+display: inline;
+z-index: 1;
+position: relative;
+}
+.workelemSubImg{
+    z-index: 1;
+    position: relative;
+}
+.workcolorDiv{
+    margin-top:4rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width:  20%;
+    height: 30%;
+    /*background-color are directly on the react component : usablefunc.js*/
+    position: fixed;
+    z-index: 0;
+}
+.workelemP{
+    position: relative;
+    z-index: 1;
+}
+.imgWorkClass{
+    z-index: 1;
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    /*box-shadow: 7rem 4rem #3300ff ;*/
+}
+/*Icons*/
+#iconlogoPart{
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+}
+
+#uliconlogoPart{
+    list-style: none;
+    display: inline-flex;
+    margin: unset;
+    padding: unset;
+}
+
+#uliconlogoPart img{
+    width: 100%;
+    margin: 0.5rem;
+}
+
 /**/
 /*CONTACT COMPONENTS*/
 #contactDivPart{
@@ -230,6 +323,53 @@ display: inline-flex;
     font-size: 1.3rem;
     color: white;
 }
+/*CARRER COMPONENT----------------------------------------------------------------*/
+#carrerTimeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#carrerTimeline::after{
+    content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.solocarrerTimeline{
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 30%;
+}
+.carrerImgIcon{
+    width: 100%;
+    height: 100%;
+    max-width: 10vw;
+    margin: 0.5rem;
+}
+.carrerLeft{
+    left: 0;
+}
+.carrerRight{
+    left: 50%;
+}
+
+
+
+
+/*REUSABLE COMPONENT----------------------------------------------------------------*/
+.subpartClass{
+    margin: 2rem;
+    height: fit-content;
+}
+.subimguclClass{
+    width: 80%;
+}
+
 /*RESPONSIVE PART-------------------------------------------------------------------*/
 
 @media only screen and (max-width: 768px) {
@@ -239,6 +379,91 @@ display: inline-flex;
     .divSectionTtl{}
     .subSectionShow{}
     .divSectionShow{}
+
+    .divSectionTtl, .homedivSectionTtl{
+        writing-mode: vertical-rl;
+        font-weight: 600;
+        position: fixed;
+        height: -webkit-fill-available;
+        width: auto;
+        font-size: 1.5rem;
+        overflow: none;
+    }
+/*NAVBAR SECTION*/
+#navSection a{
+    font-family:Anton , sans-serif;
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    padding: 0.2rem;
+}
+/*MY WORK COMPONENTS--------------------------------------------------------------------------------------*/
+.subimgClass{
+    display: block;
+    max-width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    max-width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    max-width: fill-available;
+    margin: 0.5rem;
+}
+.workelemDiv{
+    display: inline-block;
+    width: 100%;
+    max-width: 20%;
+    margin: 1rem;
+    padding: 2rem;
+}
+.workelemTtl{
+display: inline;
+z-index: 1;
+position: relative;
+}
+.workelemSubImg{
+    z-index: 1;
+    position: relative;
+}
+.workcolorDiv{
+    margin-top:4rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width:  20%;
+    height: 30%;
+    /*background-color are directly on the react component : usablefunc.js*/
+    position: fixed;
+    z-index: 0;
+}
+.workelemP{
+    position: relative;
+    z-index: 1;
+}
+.imgWorkClass{
+    z-index: 1;
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    /*box-shadow: 7rem 4rem #3300ff ;*/
+}
+/*Icons*/
+#iconlogoPart{
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+}
+
+#uliconlogoPart{
+    list-style: none;
+    display: inline-flex;
+    margin: unset;
+    padding: unset;
+}
+
+#uliconlogoPart img{
+    width: 100%;
+    margin: 0.5rem;
+}
+
 
 /*CONSTRUCTION COMPONENTS*/
 #constrTtl{
@@ -281,3 +506,6 @@ display: inline-flex;
     font-size: 30%;
 }
 }
+/*
+Lien pour les carrés de couleur https://www.benjaminsimier.com/css-obtenir-un-carre-responsive/ */
+  /* Lien pour les fonts https://fonts.google.com/specimen/Barlow#standard-styles */

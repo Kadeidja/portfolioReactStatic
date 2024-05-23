@@ -1,16 +1,12 @@
 import { Fragment } from "react";
 import { workelemData } from "../datas/alldatas";
+import {showTxtImgBox}  from "../js/usablefunc";
 function Workscomp(){
     return(
         <Fragment>
-            {workelemData.map((work)=>{
-        return(
-            <div>
-                <h1>{work.title}</h1>
-                <p>{work.description}</p>
-            </div>
-        )
-    })}
+            {
+                showTxtImgBox ({elemstoMap:workelemData},{elemId:'workelemid'},{elemTitle:'workelemtitle'},{elemImgSrc:'workelemimgsrc'},{elemDescription:'workelemdescription'},{subelemId:'wrkimgid'},{subelemSrc:'wrkimgsrc'},{elemsquareColor:'workelemsquarecolor'},{elemImgIconSrc:'workelemicon'},{elemsubidicon:'wrktxticonid'},{elemsubimgicon:'wrkimgsrcicon'})
+            }
         </Fragment>
     )
     

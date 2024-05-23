@@ -1,18 +1,22 @@
 import { Fragment } from "react";
+import { aboutmeDataPar } from "../datas/alldatas";
 import { aboutmeData } from "../datas/alldatas";
+import Uclogospace from "./usablecomponentlogospace"
 function Aboutmecomp(){
     return(
 <Fragment>
-    {aboutmeData.map((aboutsolo)=>{
-        return(
-            <div key={aboutsolo.aboutmeid} className="subpartClass">
-                <h3 className="subtitleClass">{aboutsolo.aboutmetitle}</h3>
-                <img src={aboutsolo.aboutmeimgsrc} alt="aboutmeimg" className="subimgClass"/>
-                <p>{aboutsolo.aboutmetext}</p>
-            </div>
-        )
-    })}
-</Fragment>
+    
+    <div className="aboutSpace">
+        <img src={aboutmeDataPar.aboutmeparimgsrc} alt="modify alt" id="imgAboutId"/>
+        <p id="pAboutId">{aboutmeDataPar.aboutmepar}</p>
+    </div>
+
+    <div className="logoSpace">  
+      {
+     Uclogospace({elementtomap:aboutmeData},{elementid: 'aboutmeid'},{elementsolo: 'aboutsolo'},{elementtitle:'aboutmetitle'},{elementimg:'aboutmeimgsrc'},{elementtxt: 'aboutmetext'})
+    }
+    </div>
+  </Fragment>
     )
 }
 

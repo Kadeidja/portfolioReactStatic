@@ -4,7 +4,7 @@ function Homepagecomp(){
     
         <section className="homesubSectionTtl">
             <div className="homedivSectionTtl">
-                <h1>HOMEPAGE</h1>
+                <h1>CISSE <br></br>KADIDJA</h1>
             </div>
         </section>
     

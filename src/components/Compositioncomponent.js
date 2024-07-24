@@ -4,7 +4,7 @@ return (
 
     <section className="subSectionTtl">
         <div className="divSectionTtl">
-            {titleName}
+            <h1>{titleName}</h1>
         </div>
     </section>
 

@@ -3,14 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body{
     background-image:   url('../assets/img/bkgimg.jpg');
-    box-sizing:border-box;
     position: relative;
+    scroll-behavior:smooth;
+    overflow: hidden;
     /*padding:10px;Valeur de marges intérieurs*/
 }
 section{
-    
     display: flex;
     padding: 1rem;
     box-sizing:border-box;
@@ -26,57 +31,59 @@ h1,h2,h3,h4,h5,h6{
 p{
     font-family:Rajdhani,Roboto,Urbanist , sans-serif;
     font-weight: 500;
+    font-size: medium;
 }
-
 .bigSection, .homeSection{
     display: flex;
     flex-wrap: wrap;
 }
-
+/* SECTION TITLE PART -----------------------------------------*/
 .subSectionTtl, .homesubSectionTtl{
-    box-sizing:border-box;
-    display: inline-flex;
-    max-width: 20vw;
-    max-height: 100vh;
-    padding : 1rem;
-
-    overflow: none;
-    flex: 1 0 0%;
+    box-sizing: content-box;
+    display: inline;
+    max-width: 15vw;
+    min-height: 100vh;
+    padding: 1rem;
+    overflow: hidden;
+    flex: auto;
+    position: relative;
+    width: 100%;
 }
 .divSectionTtl, .homedivSectionTtl{
-    writing-mode: vertical-rl;
-    font-weight: 900;
-    position: fixed;
-    height: -webkit-fill-available;
-    width: auto;
-    font-size: 2.5rem;
-    overflow: none;
-}
-.divSectionTtl>h1{
+    position: fixed; 
+}  
+.divSectionTtl>h1, .homedivSectionTtl>h1{
     display: flex;
     justify-content: center;
+    writing-mode: vertical-rl;
+    font-weight: 600;
+    height: -webkit-fill-available;
+    font-size: 2.5rem;
 }
-
+/* SECTION SHOW PART -----------------------------------------*/
 .subSectionShow, .homesubSectionShow{
     box-sizing:border-box;
     display: inline-flex;
     padding-top: 4rem;
     flex-wrap: wrap;
     flex-direction: row;
-    max-width: 80vw;
+    max-width: 75vw;
     max-height: 100vh;
     padding-right : 1rem;
     padding-left : 1rem;
     padding-bottom: 1rem;
-    flex: 1 0 0%;
+    flex: 1 0;
+    width: 100%;
+    overflow: hidden;
+    /*    overflow-x: scroll;*/
 }
 .divSectionShow, .homedivSectionShow{
+    box-sizing: content-box;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
+    overflow: inherit;
 }
-
-
 
 /*COMPONENT NAVBAR*/
 #navSection{
@@ -101,7 +108,6 @@ p{
     justify-items: center;
     align-items: center;
 }
-
 #barreDeRecherche{
     width: 20vw;
 }
@@ -149,16 +155,18 @@ p{
 }
 
 /*ABOUT ME COMPONENTS--------------------------------------------------------------------------------------*/
-.aboutSpace{
-    width: 80vw;
-    display: flex;
+#aboutSpaceBigSpace{
+    /*overflow-x: inherit;*/
+    max-width: 100vw; 
+    overflow-x: hidden; 
 }
-.logoSpace{
+#aboutSpace{
     width: 80vw;
-    box-sizing: inherit;
     display: flex;
-    /* flex-wrap: nowrap; */
-    overflow-x: scroll;
+    overflow: hidden;
+}
+#aboutSpace::-webkit-scrollbar {
+    display: none;
 }
 #imgAboutId{
     max-width: 20%;
@@ -168,11 +176,66 @@ p{
     padding: 1rem;
 }
 #pAboutId{
+    font-size: small;
     display: inline-flex;
     padding: 1rem;
+    width: 50%;
+    margin: 2rem;
+    text-align: end;
+    align-items: center;
+}
+#logoSpace{
+    overflow-x: scroll;
+    width: 100%;
+    box-sizing: inherit;
+    display: flex;
+}
+.subpartClass {
+    margin: 2rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 5vw;
 }
 
+
 /*MY WORK COMPONENTS--------------------------------------------------------------------------------------*/
+
+#worksBigSpace{
+    margin: auto;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: -webkit-inline-box;
+    overflow-x: scroll;
+}
+.worksubpartClass{
+    overflow-y:auto;
+}
+.workiframeClass{
+    width: 100%;
+    height: 100%;
+    max-width: 25vw;
+    max-height: 30vw;
+    display: block;
+    margin: 1rem;
+    border: none;
+    object-fit: contain;
+}
+
+.worksubtitleuclClass{
+    margin-left: 1.5rem;
+}
+.workpClass{
+    margin-left: 1.5rem;
+    width: 100%;
+    height: 100%;
+    max-width: 30vw;
+    max-height: 30vw;
+}
 .subimgClass{
     display: block;
     max-width: -moz-available;          /* WebKit-based browsers will ignore this. */
@@ -217,6 +280,7 @@ position: relative;
     max-width: 100%;
     /*box-shadow: 7rem 4rem #3300ff ;*/
 }
+
 /*Icons*/
 #iconlogoPart{
     display: flex;
@@ -224,14 +288,12 @@ position: relative;
     z-index: 1;
 
 }
-
 #uliconlogoPart{
     list-style: none;
     display: inline-flex;
     margin: unset;
     padding: unset;
 }
-
 #uliconlogoPart img{
     width: 100%;
     margin: 0.5rem;
@@ -248,12 +310,10 @@ position: relative;
     height: auto;
     position: relative;
 }
-
 #contactFormId *{
     display: block;
     font-family: Anton, sans-serif;
 }
-
 #contactFormId> input , textarea{ 
     margin: 0.5rem;
     padding: 0.5rem;
@@ -261,7 +321,6 @@ position: relative;
     border-radius: 0.2rem;
     width: 85%;
 }
-
 textarea#contactmessageId{ 
     height: 30vh;
 }
@@ -325,62 +384,131 @@ display: inline-flex;
 }
 /*CARRER COMPONENT----------------------------------------------------------------*/
 #carrerTimeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-#carrerTimeline::after{
-    content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
-.solocarrerTimeline{
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 30%;
-}
-.carrerImgIcon{
+    margin: auto;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
+    display: -webkit-inline-box;
+    overflow-x: scroll;
+}
+.solocarrerTimeline {
+        margin-left: 1rem;
+}
+.carrerGlobal .carrerPart {
+    display: block;
+    /*max-width: 30vw;*/
+    width: 25vw;
+    height: 80vh;
+    overflow-x: hidden;
+}
+.scrollBarCss{
+    overflow-y: scroll;
+    scrollbar-color: #000000;
+    scrollbar-width: thin;
+    scroll-behavior:smooth;
+}
+.solocarrerTimeline::-webkit-scrollbar{
+    width: 0.2rem ;
+    height:1rem ;
+}
+.carrerSchoolIcon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 10vw;
-    margin: 0.5rem;
+    max-height: 10vw;
+}
+.carrerImgIcon{
+    width: 10vw;
+    height: 5vw;
+    object-fit: scale-down;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 .carrerLeft{
-    left: 0 !important;
+    right: 0vw !important;
 }
 .carrerRight{
-    left: 50% !important;
+    left: 50vw !important;
 }
-
-
-
 
 /*REUSABLE COMPONENT----------------------------------------------------------------*/
 .subpartClass{
     margin: 2rem;
     height: fit-content;
+    width: 15vw;
 }
 .subimguclClass{
-    width: 80%;
+    width: 6vw;
+    /*width: 80%;*/
 }
 
 /*RESPONSIVE PART-------------------------------------------------------------------*/
 
 @media only screen and (max-width: 768px) {
 
-    .bigSection{}
+/* SECTION TITLE PART -----------------------------------------*/
+
+.subSectionTtl, .homesubSectionTtl{
+    box-sizing:content-box;
+    display: inline-flex;
+    max-width: 20vw;
+    max-height: 100vh;
+    padding : 1rem;
+    overflow: hidden;
+    flex: 1 0 0%;
+    background-color: aqua;
+    position: relative;
+}
+
+.divSectionTtl, .homedivSectionTtl{
+   /* position: fixed;
+    height: -webkit-fill-available;
+    width: auto;
+    position: fixed;*/ 
+}
+   
+.divSectionTtl>h1, .homedivSectionTtl>h1{
+    display: flex;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    font-weight: 600;
+    height: -webkit-fill-available;
+    font-size: 1rem;
+}
+/* SECTION SHOW PART -----------------------------------------*/
+.subSectionShow, .homesubSectionShow{
+    box-sizing:border-box;
+    display: inline-flex;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 80vw;
+    max-height: 100vh;
+    padding-right : 1rem;
+    padding-left : 1rem;
+    padding-bottom: 1rem;
+    flex: 1 0 0%;
+    /*overflow-x: scroll;*/
+}
+.divSectionShow, .homedivSectionShow{
+    box-sizing: content-box;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+ /*    .bigSection{}
     .subSectionTtl{}
     .divSectionTtl{}
     .subSectionShow{}
     .divSectionShow{}
 
-    .divSectionTtl, .homedivSectionTtl{
+   
+.divSectionTtl, .homedivSectionTtl{
         writing-mode: vertical-rl;
         font-weight: 600;
         position: fixed;
@@ -388,7 +516,7 @@ display: inline-flex;
         width: auto;
         font-size: 1.5rem;
         overflow: none;
-    }
+    }*/
 /*NAVBAR SECTION*/
 #navSection a{
     font-family:Anton , sans-serif;
@@ -398,6 +526,44 @@ display: inline-flex;
     font-size: 1.2rem;
     margin: 0.5rem;
     padding: 0.2rem;
+}
+/*ABOUT ME COMPONENTS--------------------------------------------------------------------------------------*/
+#aboutSpaceBigSpace{
+    overflow-x: inherit;
+}
+#aboutSpace{
+    width: 80vw;
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+#imgAboutId{
+    max-width: 50%;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    
+}
+#pAboutId{
+    font-size: small;
+    padding: 1rem;
+    width: 100%;
+    margin: 2rem;
+    text-align: center;
+}
+#logoSpace{
+    overflow-x: scroll;
+    width: 100vw;
+    box-sizing: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.subtitleuclClass {
+    display: none;
+}
+.subimguclClass{
+    width: 13vw;
 }
 /*MY WORK COMPONENTS--------------------------------------------------------------------------------------*/
 .subimgClass{
@@ -505,6 +671,115 @@ display: inline-flex;
     margin: 0.1em;
     font-size: 30%;
 }
+
+
+/*CARRER COMPONENT----------------------------------------------------------------*/
+#carrerTimeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#carrerTimeline::before{
+content: '';
+  position: absolute;
+  width: 0.5vw;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  bottom: 0;
+  left: 40vw;
+  margin-left: -3px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+#carrerTimeline .carrerRight .soloPointer::before{
+    content: '';
+    background-color: rgb(186, 26, 26);
+    position: absolute;
+    rotate: 90deg;
+    width: 0.5vw;
+    bottom: 0%;
+    top: -17vh;
+    height: 25vh;
+    left: -5vw;
+
+}
+#carrerTimeline .carrerLeft .soloPointer{
+    content: '';
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    rotate: 270deg;
+    width: 0.5vw;
+    bottom: 0%;
+    top: -17vh;
+    height: 25vh;
+    left: 24vw;
+    /*right: inherit;
+    display: flex;
+    text-align: end;
+    flex-wrap: wrap;
+    */
+}
+.solocarrerTimeline{
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 30%;
+}
+
+/*.solocarrerPointer{
+    content: '';
+    box-sizing: content-box;
+    background-color: rgb(234, 10, 10);
+    position: absolute;
+    rotate: 90deg;
+    width: 0.5rem;
+    bottom: 0%;
+    top: 0%;
+}*/
+.carrerImgIcon{
+    width: 100%;
+    height: 100%;
+    max-width: 10vw;
+    margin: 0.5rem;
+}
+.carrerLeft{
+    right: 0vw !important;
+    /*text-align: end;
+    margin-right: 10%;*/
+}
+.carrerRight{
+    left: 50vw !important;
+    /*margin-left: 5%;*/
+}
+
+/*
+.carrerRight::before{
+    content: '';
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    rotate: 90deg;
+    width: 0.5rem;
+    top: -10rem;
+    left: 8rem;
+    height: 16rem;
+}
+.carrerLeft::after{
+    content: '';
+    background-color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    position: absolute;
+    rotate: 270deg;
+    width: 0.5rem;
+    top: -10rem;
+    right: 4%;
+    height: 16rem;
+    margin: 10px 40px;
+}
+*/
+
 }
 /*
 Lien pour les carrés de couleur https://www.benjaminsimier.com/css-obtenir-un-carre-responsive/ */

@@ -50,49 +50,49 @@ export const aboutmeDataPar =
 export const aboutmeData = [
    {
        aboutmeid: 0,
-       aboutmetitle:'ABOUT ME ONE',
+       aboutmetitle:'HTML',
        aboutmetext: 'Lorem ipsum dolor sit',
        aboutmeimgsrc:htmlImgLogo,
    },
    {
        aboutmeid: 1,
-       aboutmetitle:'ABOUT ME TWO',
+       aboutmetitle:'CSS',
        aboutmetext: 'Lorem ipsum dolor sit',
        aboutmeimgsrc:cssImgLogo
    },
    {
        aboutmeid: 2,
-       aboutmetitle:'ABOUT ME THREE',
+       aboutmetitle:'BOOTSTRAP',
        aboutmetext: 'Lorem ipsum dolor sit',
        aboutmeimgsrc:bootstrapImgLogo
    },
    {
        aboutmeid: 3,
-       aboutmetitle:'ABOUT ME THREE',
+       aboutmetitle:'WORDPRESS',
        aboutmetext: 'Lorem ipsum dolor sit',
        aboutmeimgsrc:wordpressImgLogo
    },
    {
        aboutmeid: 4,
-       aboutmetitle:'ABOUT ME THREE',
+       aboutmetitle:'FIGMA',
        aboutmetext: 'Lorem ipsum dolor sit',
        aboutmeimgsrc:figmaImgLogo
    },
    {
        aboutmeid: 5,
-       aboutmetitle:'ABOUT ME THREE',
+       aboutmetitle:'JAVASCRIPT',
        aboutmetext: 'Lorem ipsum dolor sit',
        aboutmeimgsrc:javascriptImgLogo
    },
    {
        aboutmeid: 6,
-       aboutmetitle:'ABOUT ME THREE',
+       aboutmetitle:'REACT',
        aboutmetext: 'Lorem ipsum dolor sit',
        aboutmeimgsrc:reactImgLogo
    },
    {
        aboutmeid: 6,
-       aboutmetitle:'ABOUT ME THREE',
+       aboutmetitle:'NODE JS',
        aboutmetext: 'Lorem ipsum dolor sit',
        aboutmeimgsrc:nodejsImgLogo
    }
@@ -167,38 +167,54 @@ export const carrerPartData = [
     }
 ];
 export const workelemData = [
+    {
+        workelemid: 0,
+        workelemtitle:'REACT JS - MON PORTFOLIO',
+        workelemtext: [{wrktxtid:0, wrktxt:'Lorem ipsum dolor sit'}, {wrktxtid:1, wrktxt:'Lorem ipsum dolor'}],
+        workelemimgsrc:[{wrkimgid:0,wrkimgsrc:'https://i.pinimg.com/564x/6f/d5/89/6fd589810a145b9068c15b75a511d048.jpg',wrkimgalt:'Image illustratif'}/*{wrkimgid:1,wrkimgsrc:'https://i.pinimg.com/564x/6f/d5/89/6fd589810a145b9068c15b75a511d048.jpg'}*/],
+        workelemdescription : `Récemment diplômée d’une licence professionnelle en développement web, je suis actuellement à la recherche d’un emploi en tant que développeuse web front end.
+        À la suite de mes études, je me suis spécialisé dans le langage JavaScript, notamment sur la librairie React et le framework Node.js afin de pouvoir travailler sur le front end et le backend.
+        Ce portfolio vous donnera en quelque sorte un aperçu de mes compétences.
+       `,
+        workelemsquarecolor: '#100da6',
+        workelemWebSite: [{wrkwebsiteid:0,wrkwebsitesrc:'https://kade-portfolio.com/',wrkwebsitettl:''}],
+        workelemicon: [{wrktxticonid:0, wrkimgsrcicon: htmlImgLogo},{wrktxticonid:1, wrkimgsrcicon:cssImgLogo},{wrktxticonid:2, wrkimgsrcicon:bootstrapImgLogo},{wrktxticonid:3, wrkimgsrcicon:nodejsImgLogo}]
+    },
    {
-       workelemid: 0,
-       workelemtitle:'WORKS ONE',
+       workelemid: 1,
+       workelemtitle:'WORDPRESS - FPPC',
        workelemtext: [{wrktxtid:0, wrktxt:'Lorem ipsum dolor sit'}, {wrktxtid:1, wrktxt:'Lorem ipsum dolor'}],
-       workelemimgsrc:[{wrkimgid:0,wrkimgsrc:'https://i.pinimg.com/564x/6f/d5/89/6fd589810a145b9068c15b75a511d048.jpg'}/*{wrkimgid:1,wrkimgsrc:'https://i.pinimg.com/564x/6f/d5/89/6fd589810a145b9068c15b75a511d048.jpg'}*/],
+       workelemimgsrc:[{wrkimgid:0,wrkimgsrc:'https://i.pinimg.com/564x/6f/d5/89/6fd589810a145b9068c15b75a511d048.jpg',wrkimgalt:'Image illustratif'}/*{wrkimgid:1,wrkimgsrc:'https://i.pinimg.com/564x/6f/d5/89/6fd589810a145b9068c15b75a511d048.jpg'}*/],
        workelemdescription : `Récemment diplômée d’une licence professionnelle en développement web, je suis actuellement à la recherche d’un emploi en tant que développeuse web front end.
        À la suite de mes études, je me suis spécialisé dans le langage JavaScript, notamment sur la librairie React et le framework Node.js afin de pouvoir travailler sur le front end et le backend.
        Ce portfolio vous donnera en quelque sorte un aperçu de mes compétences.
       `,
        workelemsquarecolor: '#100da6',
+       workelemWebSite: [{wrkwebsiteid:0,wrkwebsitesrc:'https://fpcc.fr/',wrkwebsitettl:''}],
        workelemicon: [{wrktxticonid:0, wrkimgsrcicon: htmlImgLogo},{wrktxticonid:1, wrkimgsrcicon:cssImgLogo},{wrktxticonid:2, wrkimgsrcicon:bootstrapImgLogo},{wrktxticonid:3, wrkimgsrcicon:nodejsImgLogo}]
    },{
-       workelemid: 1,
-       workelemtitle:'WORKS TWO',
+       workelemid: 2,
+       workelemtitle:'WORDPRESS - ETRAELEC',
        workelemtext: [{wrktxtid:0, wrktxt:'Lorem ipsum dolor sit'}, {wrktxtid:1, wrktxt:'Lorem ipsum dolor'}],
-       workelemimgsrc:[{wrkimgid:0,wrkimgsrc:'https://i.pinimg.com/564x/6f/d5/89/6fd589810a145b9068c15b75a511d048.jpg'}],
+       workelemimgsrc:[{wrkimgid:0,wrkimgsrc:'https://i.pinimg.com/564x/6f/d5/89/6fd589810a145b9068c15b75a511d048.jpg',wrkimgalt:'Image illustratif'}],
        workelemdescription : `Récemment diplômée d’une licence professionnelle en développement web, je suis actuellement à la recherche d’un emploi en tant que développeuse web front end.
        À la suite de mes études, je me suis spécialisé dans le langage JavaScript, notamment sur la librairie React et le framework Node.js afin de pouvoir travailler sur le front end et le backend.
        Ce portfolio vous donnera en quelque sorte un aperçu de mes compétences.
       `,
        workelemsquarecolor: '#e2cc02',
+       workelemWebSite: [{wrkwebsiteid:0,wrkwebsitesrc:'https://etraelec.com/',wrkwebsitettl:''}],
        workelemicon: [{wrktxticonid:0, wrkimgsrcicon: htmlImgLogo},{wrktxticonid:1, wrkimgsrcicon:cssImgLogo},{wrktxticonid:2, wrkimgsrcicon:bootstrapImgLogo},{wrktxticonid:3, wrkimgsrcicon:nodejsImgLogo}]
    },{
-       workelemid: 2,
-       workelemtitle:'WORKS THREE',
+       workelemid: 3,
+       workelemtitle:'WORDPRESS - JRG LOGISTICS',
        workelemtext: [{wrktxtid:0, wrktxt:'Lorem ipsum dolor sit'}, {wrktxtid:1, wrktxt:'Lorem ipsum dolor'}],
-       workelemimgsrc:[{wrkimgid:0,wrkimgsrc:'https://i.pinimg.com/564x/6f/d5/89/6fd589810a145b9068c15b75a511d048.jpg'}],
+       workelemimgsrc:[{wrkimgid:0,wrkimgsrc:'https://i.pinimg.com/564x/6f/d5/89/6fd589810a145b9068c15b75a511d048.jpg',wrkimgalt:'Image illustratif'}],
        workelemdescription : `Récemment diplômée d’une licence professionnelle en développement web, je suis actuellement à la recherche d’un emploi en tant que développeuse web front end.
        À la suite de mes études, je me suis spécialisé dans le langage JavaScript, notamment sur la librairie React et le framework Node.js afin de pouvoir travailler sur le front end et le backend.
        Ce portfolio vous donnera en quelque sorte un aperçu de mes compétences.
       `,
        workelemsquarecolor: '#a60d0d',
+       workelemWebSite: [{wrkwebsiteid:0,wrkwebsitesrc:'https://jrg-logistics.com/',wrkwebsitettl:''}],
        workelemicon: [{wrktxticonid:0, wrkimgsrcicon: htmlImgLogo},{wrktxticonid:1, wrkimgsrcicon:cssImgLogo},{wrktxticonid:2, wrkimgsrcicon:bootstrapImgLogo},{wrktxticonid:3, wrkimgsrcicon:nodejsImgLogo}]   
    }
 ];

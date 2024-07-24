@@ -4,7 +4,7 @@ import { createBrowserRouter } from 'react-router-dom';
 //COMPONENTS
 import Homepagecomp from '../components/Homepagecomponent';
 import Compositioncomp from '../components/Compositioncomponent';
-import Titlepartcomp from '../components/Titlepartcomponent';
+//import Titlepartcomp from '../components/Titlepartcomponent';
 import Unavailablecomp from '../components/notavailiablecomponent';
 import Constructioncomp from '../components/Constructioncomponent';
 import Carrercomp from '../components/Carrercomponent';
@@ -26,16 +26,16 @@ export const router = createBrowserRouter([
           element: <Homepagecomp/>,
         },{
           path: 'aboutme',
-          element: Compositioncomp ({titleName: Titlepartcomp('ABOUT ME'), showoffComponent: <Aboutmecomp/>}),//OK  =>element: Compositioncomp ({title: Titlepartcomp('ABOUTME'), showoffComponent:<Components/>})
+          element: Compositioncomp ({titleName: 'ABOUT ME', showoffComponent: <Aboutmecomp/>}),//OK  =>element: Compositioncomp ({title: Titlepartcomp('ABOUTME'), showoffComponent:<Components/>})
       },{
         path: 'carrer',
-        element: Compositioncomp ({titleName: Titlepartcomp('EDUCATIONAL BACKGROUND'), showoffComponent: <Carrercomp/>}),//OK  =>element: Compositioncomp ({title: Titlepartcomp('ABOUTME'), showoffComponent:<Components/>})
+        element: Compositioncomp ({titleName: 'EDUCATIONAL BACKGROUND', showoffComponent: <Carrercomp/>}),//OK  =>element: Compositioncomp ({title: Titlepartcomp('ABOUTME'), showoffComponent:<Components/>})
     },{
         path: 'works',
-        element: Compositioncomp ({titleName: Titlepartcomp('MY WORKS'), showoffComponent: <Workscomp/>}),//OK  =>element: Compositioncomp ({title: Titlepartcomp('ABOUTME'), showoffComponent:<Components/>})
+        element: Compositioncomp ({titleName: 'MY WORKS', showoffComponent: <Workscomp/>}),//OK  =>element: Compositioncomp ({title: Titlepartcomp('ABOUTME'), showoffComponent:<Components/>})
     },{
         path: 'contactme',
-        element: Compositioncomp ({titleName: Titlepartcomp('CONTACTS'), showoffComponent: Unavailablecomp('CONTACTS')}),//OK  =>element: Compositioncomp ({title: Titlepartcomp('ABOUTME'), showoffComponent:<Components/>})
+        element: Compositioncomp ({titleName:'CONTACTS', showoffComponent: Unavailablecomp('CONTACTS')}),//OK  =>element: Compositioncomp ({title: Titlepartcomp('ABOUTME'), showoffComponent:<Components/>})
     },{
       path: 'construction',
       element: Singlespacecomp({ showsingleComponent: <Constructioncomp/>})

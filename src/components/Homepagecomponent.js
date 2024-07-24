@@ -4,13 +4,13 @@ function Homepagecomp(){
     
         <section className="homesubSectionTtl">
             <div className="homedivSectionTtl">
-                <h1>CISSE <br></br>KADIDJA</h1>
+                <h1>CISSE KADIDJA</h1>
             </div>
         </section>
     
         <section className="homesubSectionShow">
             <div className="homedivSectionShow">
-                <h1>SHOWOFFPART</h1>
+                <h1>DEVELOPPEUSE WEB FRONT-END</h1>
             </div>        
         </section>
     
